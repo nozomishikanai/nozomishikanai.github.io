@@ -1,0 +1,75 @@
+*{
+  font-family: 'Wendy One', sans-serif;
+}
+
+body {
+   background-image: url(https://farm6.static.flickr.com/5473/31288975832_294f61e93c_b.jpg);
+   background-size:repeat;
+}
+
+section {
+  text-align:center;
+  float:left;
+  background-color:#EAEDED ;
+  margin: 30px 30px 50px 160px;
+  border-radius:20px;
+}
+
+article {
+  width:20%;
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom:5%;
+  text-align:center;
+  float:left;
+  padding:10px; 
+}
+
+section h1 {
+   font-size: 40px;
+}
+
+section p{
+   font-size: 20px;
+}
+
+header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  font-weight:normal;
+  color:#000;
+  border: 1px solid #000;
+  text-align:center;
+  background-color:#808B96;
+  border-radius: 20px;
+}
+
+footer{
+  font-weight:normal;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  color:#000;
+  border: 1px solid #000;
+  text-align:center;
+  clear:both;
+  background-color:#808B96;
+  border-radius: 20px;
+}
+
+.clear{
+  clear:right;
+}
+
+.clear2{
+  clear:left;
+}
+
+footer h2{
+  clear:right;
+}
+
+.images{
+  margin:15px 20px;
+}
