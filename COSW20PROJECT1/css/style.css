@@ -48,7 +48,7 @@ section.top {
 } */
 
 nav {
-  background-image: url(https://i.pinimg.com/736x/b2/03/ac/b203acaa5928e1fd8aaf340b78930483--white-flowers-white-roses.jpg);
+  background-image:    url(https://i.pinimg.com/736x/b2/03/ac/b203acaa5928e1fd8aaf340b78930483--white-flowers-white-roses.jpg);
   border-radius: 7px;
   height: 60px;
   width: 90%;
@@ -102,9 +102,10 @@ section.middle {
   margin: 10px 5px;
   
 }
-.secondarticle header {
+.secondarticle header,
+.reference header {
   padding-bottom: 20px;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
   
 }
 .secondarticle p{
@@ -154,13 +155,31 @@ section.bottom {
 }
 
 .reference li {
-  text-align: center;
+  text-align: left;
+  color: white;
   list-style: none;
+  font-size: 20px;
+
 }
+
+.reference li:before {
+    content: "＊";
+    display: inline-block;
+    float: left;
+}
+
+.reference a,
+.top a {
+  color: white;
+}
+
+
 
 footer {
   padding-bottom: 10px;
   text-align: center;
+  font-style: italic;
+  
 }
 
 /* hover   */
@@ -172,44 +191,33 @@ a:visited {
 }
 
 /* mouse over link */
-a,link:hover {
-    color: white;
-    cursor: pointer;  
+a:hover {
+    cursor: pointer; 
+    background-color: lightblue;
 }
+
+
 /* clear */
 /* .clearfix {
   clear: both;
 } */
 
 
-
-
-
-
-
-
-
-
-/* media query */
+/*---------------- media query---------------------- */
 
 /* for laptop*/
-
 @media (max-width : 1200px) {
   
   .forsmallscreen {
     display: none;
-  }
-  
+  } 
   article {
     height: auto ;
     overflow:none;
   }
 }
 
-
-
 /* for tablet */
-
 @media (max-width : 768px) {
   .forsmallscreen {
     display: none;
@@ -223,7 +231,6 @@ a,link:hover {
     width: 47%;
     margin: 2% 1%;
   }
-  
   nav {
     width: 90%;
     margin: 0 auto;
@@ -238,14 +245,11 @@ a,link:hover {
     font-size: 20px;
     text-align: center;
   }
-  
-  
 }
 
 
 /* for smartphones */
 @media (max-width : 480px)  {
-  
   nav {
     background-image:none;
   }
@@ -257,20 +261,17 @@ a,link:hover {
     font-size: 20px;
     text-align: center;
   }
-  
   .forbigscreen {
     display: none;
   }
-  
   .secondarticle {
      width: 100%;
      margin: 5% auto;
   }
-    
   .reference li {
      width: 100%;
      margin: 5% auto;
      text-align: left;
-}
-
+     font-size: 1em;
+  }
 }
