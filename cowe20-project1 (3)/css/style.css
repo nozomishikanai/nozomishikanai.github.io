@@ -28,7 +28,7 @@ body{
 }
 
 section.top {
-  height: 500px;
+  height: auto;
   text-align: center;
   border-radius: 20px;
   width: 100%;
@@ -72,8 +72,6 @@ a {
   display: inline-block;
 }
 
-
-
 section.middle {
   height: 1100px;  
   margin-bottom: 30px;
@@ -87,9 +85,6 @@ section.middle {
   margin: auto;
   text-align: center;
 }
-article {
-  height: 1100px;
-}
 
 .secondarticle {
   background-color: #8B8378;
@@ -100,22 +95,30 @@ article {
   border-radius: 7px;
 }
 
+.p-content {
+  background-color: #E6E6E6;
+  padding: 5px 10px;
+  border-radius: 7px;
+  margin: 10px 5px;
+  
+}
 .secondarticle header {
   padding-bottom: 20px;
   border-bottom: 1px solid black;
   
 }
-
 .secondarticle p{
   font-size: 15px;
   text-align: left;
   letter-spacing: 1px;
   line-height: 18px;
+  
 }
 .secondarticle img {
-  margin-top: 10px;
   width: 100%;
   border-radius: 50px;
+ 
+  
 }
 
 .secondarticle header, .reference header {
@@ -190,21 +193,23 @@ a,link:hover {
 /* media query */
 
 /* for laptop*/
-@media (max-width : 1000px) {
+
+@media (max-width : 1200px) {
   
   .forsmallscreen {
     display: none;
   }
-}
-
-@media (min-width : 1000px) {
-  .forsmallscreen {
-    display: none;
+  
+  article {
+    height: auto ;
+    overflow:none;
   }
 }
 
 
-/* for i pad */
+
+/* for tablet */
+
 @media (max-width : 768px) {
   .forsmallscreen {
     display: none;
@@ -238,15 +243,12 @@ a,link:hover {
 }
 
 
-
-
 /* for smartphones */
-@media (max-width : 320px) {
+@media (max-width : 480px)  {
   
   nav {
     background-image:none;
   }
-  
   .navlist {
     width: 100%;
     margin: 3% auto;
