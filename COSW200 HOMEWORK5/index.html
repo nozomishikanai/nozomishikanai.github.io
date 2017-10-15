@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Top page</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+        <div  class="wrapper">
+          <div id="first" class="first-container">
+            <h1 id ="firsth1">Let's travel all over the world!</h1>
+            <h2 id ="firsth2">Life is a journey!</h2>
+          </div>
+          <div id="second" class="second-container">
+            <h2>New Account</h2>
+              <form method="post" action="http://www.example.org/register">
+                <label for="username">Create a username: </label>
+                <input type="text" id="username" />
+                <div id="feedback"></div>
+                <label for="password">Create a password: </label>
+                <input type="password" placeholder="Password" id="password" />
+                <div id="createpassword"></div>
+                <label for="password">Repeat a password: </label>
+                <input type="password" placeholder="Confirm Password"id="repeatpassword" />
+                <div id ="reppassword"></div>
+              </form> 
+              <div class= "signup">
+                <input id= "submit" type="submit" value="sign up" />
+              </div>
+          </div>
+        </div> 
+     <script>
+      
+// Create pop up
+
+// creat HTML for the message
+
+var message = '<div class=\"header\"><a id=\"close\" href="#">Close X</a></div>';
+message += '<div><h2>Don\'t miss this chance!</h2>';
+message += 'Get 100 extra points by signing up today!</div>';
+
+var elNote = document.createElement('div');
+elNote.setAttribute('id', 'note');
+elNote.innerHTML = message;
+document.body.appendChild(elNote);
+
+function dismissNote() {
+  document.body.removeChild(elNote);
+}
+
+var elClose = document.getElementById('close');
+elClose.addEventListener('click', dismissNote,false);
+
+
+
+//mouseover event
+function changeTop() {
+  var newBackGround = document.getElementById('first');
+  newBackGround.className = 'change';
+  var newMessage = document.getElementById('firsth1');
+  newMessage.textContent = 'Are you ready?';
+  var newMessage = document.getElementById('firsth2');
+  newMessage.textContent = 'Let\'s go!';
+}
+
+var topContainer = document.getElementById('first');
+topContainer.addEventListener('mouseover', changeTop, false);
+
+//mouseout event
+
+function changeBack() {
+  var newBackGround = document.getElementById('first');
+  newBackGround.className = 'first-container';
+  var newMessage = document.getElementById('firsth1');
+  newMessage.textContent = 'Let\'s travel all over the world!';
+  var newMessage = document.getElementById('firsth2');
+  newMessage.textContent = 'Life is a journey!';
+}
+
+var topContainer = document.getElementById('first');
+topContainer.addEventListener('mouseout', changeBack, false);
+
+
+// 2) focus and blur. username should be at least 8 characters long and checks that the input meets th requirement.
+    
+function checkUsername() {
+      var elMsg = document.getElementById('feedback');
+      if (this.value.length < 8 ) {
+          elMsg.innerHTML = 'Not long enough yet!';   
+      } else {
+          elMsg.innerHTML = '';
+      }
+  }  
+    
+function tipUsername () {
+      elMsg.className = 'tip';
+      elMsg.innerHTML = 'Username must be at least 8 characters';
+  }
+    
+
+  var el = document.getElementById('username');
+  var elMsg = document.getElementById('feedback');
+    
+ el.addEventListener('focus', tipUsername, false);
+ el.addEventListener('blur', checkUsername, false);
+    
+    
+ // 3) focus and blur. password should be at least 5 characters long and checks that the input meets the requirement and matches with the repeat password.
+    
+function checkPassword() {
+      var elPassMsg = document.getElementById('createpassword');
+      if (this.value.length < 5 ) {
+          elPassMsg.innerHTML = 'Not long enough yet!';   
+      } else {
+          elPassMsg.innerHTML = '';
+      }
+  }  
+    
+function tipPassword () {
+      elPassMsg.className = 'tip';
+      elPassMsg.innerHTML = 'Password must be at least 5 characters';
+  }
+    
+
+  var el = document.getElementById('password');
+  var elPassMsg = document.getElementById('createpassword');
+   
+ el.addEventListener('focus', tipPassword, false);
+ el.addEventListener('blur', checkPassword, false);
+    
+ 
+    
+  // 3) Check repeated password matches your password.
+        
+    
+function checkRepeatPassword() {
+      if (document.getElementById('password').value != document.getElementById('repeatpassword').value) {
+          document.getElementById('reppassword').innerHTML = 'They are not matching!';    
+  }   else {
+       window.open("plan.html", "_target");
+     
+  }
+}
+          
+function tipRepeatPassword () {
+      elRepPassword.className = 'reptip';
+      elRepPassword.innerHTML = 'Please repeat the password again';
+  }
+    
+
+    var elRepPass = document.getElementById('repeatpassword');
+    var submitButton = document.getElementById('submit');
+     
+ elRepPass.addEventListener('focus', tipRepeatPassword, false);
+ submitButton.addEventListener('click', checkRepeatPassword, true);
+          
+         
+</script>   
+        
+        
+        
+</body>
+</html>
+        

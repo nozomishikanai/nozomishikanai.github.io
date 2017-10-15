@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Your plan</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="javascript.js"></script>
+    </head>
+    <body>
+      <div id="wrapper">
+        <div class= "plan-first-container">
+        <h1>Select your trip plan to Las Vegas</h1>
+        </div>
+         <form method="post" action="http://www.example.org/register" id="chooseplan">
+
+             <label for="package" class="selectbox"> <h1 class= "selecthotel">Select Hotel</h1> </label>
+        <select id="package">
+              <option value="Wynn Las Vegas">Wynn Las Vegas : $200/night</option>
+              <option value="The Venetian">The Venetian : $160/night</option>
+              <option value="Bellagio Hotel and Casino">Bellagio Hotel and Casino : $140/night</option>   
+        </select>
+        <div id="packageHint" class="tip"></div>
+        <div id ="agreement">
+            <input type="checkbox" id="terms" class="checkterms"/>
+            <label for="terms" class="checkbox"> Check to agree to terms &amp; conditions</label>
+             <div id="termsHint" class="warning"></div>
+        <div id="next">
+            <input type="submit" value="next" />
+        </div>
+        </div>
+        </form>
+        
+      </div>
+        
+     <script>
+         
+  /* JavaScript*/   
+  /* Add a select input that provides the user with 3 options for whatever your special deal is -- and encourage them to get the higher price item*/ 
+        
+     var elForm = document.getElementById('chooseplan');
+     var elSelectPackage = document.getElementById('package');
+     var elPackageHint = document.getElementById('packageHint');
+     var elTerms = document.getElementById('terms');
+     var elTermsHint = document.getElementById('termsHint');
+         
+ function packageHint() {
+     var pack = this.options[this.selectedIndex].value;
+     if (pack === 'Wynn Las Vegas') {
+         elPackageHint.innerHTML = 'Perfect!! Book now to save extra $20!';
+     } else {
+         elPackageHint.innerHTML = 'Save $20 if you choose Wynn Las Vegas !';
+     }
+ }
+   
+  elSelectPackage.addEventListener('change', packageHint, false);       
+         
+         
+/* Add an agree to terms checkbox*/      
+         
+         
+ function checkTerms(event) {
+     if (!elTerms.checked) {
+         elTermsHint.innerHTML = 'You must agree to the terms.';
+         event.preventDefault();
+     }
+ }
+         
+    
+         
+  elForm.addEventListener('submit', checkTerms, false);
+    
+        
+        
+     </script>
+    </body>
+    
+    
+</html>

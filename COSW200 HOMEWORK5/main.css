@@ -1,0 +1,220 @@
+* {
+  font-family: arial;
+}
+
+/*---------index.html------------------------------------*/
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+
+
+.first-container {
+  background-image: url(https://media1.popsugar-assets.com/files/thumbor/PuTEoyLkzD64ThaoIybCV1lkWdo/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2015/04/22/834/n/1922441/1f7f1802_edit_img_image_15632182_1425315600/i/Best-Travel-Quotes.jpg);
+  background-repeat:no-repeat;
+  background-size:100% 90vh; 
+
+  height: 300px;
+  padding-top: 100px;
+  color: white;
+  text-shadow: 0px 3px 0px #b2a98f,
+               0px 14px 10px rgba(0,0,0,0.15),
+               0px 24px 2px rgba(0,0,0,0.1),
+               0px 34px 30px rgba(0,0,0,0.1);
+}
+
+.second-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+label {
+  font-size: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 10px;
+  width: 200px;
+  height: 25px;
+}
+
+#feedback, #createpassword,#reppassword{
+  margin-top: 8px;
+  color: red;
+  font-style: italic;
+}
+.signup {
+  display: block;
+  margin-top: 10px;
+}
+
+.submitbutton {
+  height: 30px;
+  width:  200px;
+  font-size: 20px;
+  background-color: grey;
+  border-radius : 7px;
+  box-shadow: -1px 3px 6px lightgrey;
+}
+
+.change {
+   background-image: url(http://www.outdoors.org/header-slideshow-images/images/Tom-Header.jpg);
+
+  background-size:100% 70vh;  
+  height: 300px;
+  padding-top: 100px;
+  color: black;
+  text-shadow: 0px 3px 0px #b2a98f,
+               0px 14px 10px rgba(0,0,0,0.15),
+               0px 24px 2px rgba(0,0,0,0.1),
+               0px 34px 30px rgba(0,0,0,0.1);
+}
+
+
+
+#note {
+  color: #fff;
+  background-color: #fff;
+  opacity: 0.9;
+  box-shadow: -3px 3px 6px #000;
+  padding: 1em 1em 2em 1em;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 1em;
+  left: 25%;}
+
+#note .header + div {
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  text-align: center;
+  top: 1px;
+  color: blue;
+  padding: 20px;
+  margin: 30px;
+  border: 2px solid blue;}
+
+#note h2 {
+  color: blue;
+  padding-top: 20px;
+  padding-bottom: 20px;}
+
+#note a {
+  text-decoration: none;
+  color: #blue;}
+
+#note .header {
+  text-align: right;
+  background-color: #fff;
+  border: none;
+  padding: 0 0 0 10px;}
+
+/* .shown {
+  visibility: visible;}
+
+.hidden {
+  visibility: hidden;}
+ */
+
+
+
+/*---------plan.html------------------------------------*/
+
+
+.plan-first-container {
+  background-image: url(https://www.reisebuero-frenzen.de/media/images/las-vegas-large.jpg);
+  background-repeat:no-repeat;
+  background-size:100% 60vh; 
+
+  height: 300px;
+  padding-top: 100px;
+  padding-left: 20px; 
+  color: white;
+  text-shadow: 0px 3px 0px #b2a98f,
+               0px 14px 10px rgba(0,0,0,0.15),
+               0px 24px 2px rgba(0,0,0,0.1),
+               0px 34px 30px rgba(0,0,0,0.1);
+}
+
+
+
+
+#packageHint, #termsHint {
+  margin-top: 8px;
+  color: red;
+  font-style: italic;
+}
+
+
+.selecthotel {
+   font-size: 30px;
+}
+
+#package {
+    font-size: 20px;
+}
+
+#agreement {
+
+}
+
+
+
+
+#terms {
+    display: inline-block;
+    width: 20px;
+    position: relative;
+    top: 4px;
+   
+}
+
+
+.checkbox {
+    display: inline-block;
+    font-size: 14px;
+    padding-top: -10px;
+    
+}
+
+#next input {
+    color: white;
+    background-color: orange;
+    display: inline-block;
+    height: auto;
+    font-size: 20px;
+    border-radius : 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
