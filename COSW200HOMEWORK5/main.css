@@ -36,7 +36,7 @@ h2 {
 
 .second-container {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto 100px auto;
   text-align: center;
 }
 
@@ -92,11 +92,16 @@ input {
   opacity: 0.9;
   box-shadow: -3px 3px 6px #000;
   padding: 1em 1em 2em 1em;
-  height: 50%;
-  width: 50%;
+  height: 280px;
   position: absolute;
-  top: 1em;
-  left: 25%;}
+  top: 2em;
+  left: 25%;
+  right: 25%;
+  
+ 
+
+
+}
 
 #note .header + div {
   background: rgb(255, 255, 255);
@@ -106,8 +111,9 @@ input {
   top: 1px;
   color: blue;
   padding: 20px;
-  margin: 30px;
-  border: 2px solid blue;}
+  margin: 10px; 
+  height: 80%;
+}
 
 #note h2 {
   color: blue;
@@ -123,6 +129,18 @@ input {
   background-color: #fff;
   border: none;
   padding: 0 0 0 10px;}
+
+
+.signup input {
+    color: white;
+    background-color: #ffbf00;
+    display: inline-block;
+    height: auto;
+    font-size: 20px;
+    border-radius : 7px;
+}
+
+
 
 /* .shown {
   visibility: visible;}
@@ -203,14 +221,44 @@ input {
 
 
 
+/* hover, active */
+
+.signup input:hover {
+    background-color: #ff8c00;
+    cursor: pointer;
+}
+
+.signup input:active {
+  background-color: #ff8c00;
+ 
+  transform: translateY(4px);
+}
+
+
+#next input:hover {
+    background-color: #ff8c00;
+    cursor: pointer;
+}
+
+#next input:active {
+  background-color: #ff8c00;
+ 
+  transform: translateY(4px);
+}
 
 
 
+/* for phone */
 
-
-
-
-
+@media screen and (max-width: 500px)  {
+    #note h2 {
+        font-size: 25px;   
+    }
+    
+    #note p {
+        font-size: 10px;
+    }
+}
 
 
 
